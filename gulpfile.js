@@ -26,7 +26,8 @@ function css(done) {
 
 // el watch es para que se repita funcion css sin requerir estar compilando todas las veces
 function dev (done) {
-    watch('src/scss/app.scss', css);
+    watch('src/scss/**/*.scss', css); // --- **-busca en la carpeta scss --- *-cualquier archivos que terminan scss.
+    /* watch('src/scss/app.scss', css); */ // Para una ubicación en particular
 }
 
 //----------------------------------------------------------------
