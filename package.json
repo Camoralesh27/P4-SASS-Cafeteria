@@ -1,0 +1,32 @@
+{
+  "name": "05-cafeteriasass",
+  "version": "1.0.0",
+  "description": "Aprendiendo SASS, Gulp, CSS grid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Camoralesh27/P4-SASS-Cafeteria.git"
+  },
+  "author": "Cristhian Morales",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Camoralesh27/P4-SASS-Cafeteria/issues"
+  },
+  "homepage": "https://github.com/Camoralesh27/P4-SASS-Cafeteria#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "postcss": "^8.4.28",
+    "sass": "^1.65.1"
+  },
+  "browserslist": [ 
+    "last 1 version",
+    "> 1%"
+  ]
+  
+}
