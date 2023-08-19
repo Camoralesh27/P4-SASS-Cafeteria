@@ -19,14 +19,15 @@
   "devDependencies": {
     "autoprefixer": "^10.4.15",
     "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.1.0",
+    "gulp-webp": "^4.0.1",
     "postcss": "^8.4.28",
     "sass": "^1.65.1"
   },
-  "browserslist": [ 
+  "browserslist": [
     "last 1 version",
     "> 1%"
   ]
-  
 }
