@@ -65,7 +65,8 @@ exports.dev = dev;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.default = series( imagenes, versionWebp, versionAvif, css, dev ); //la que tiene el watch hasta el final porque esa detiene la ejecución
+exports.default = series( css, dev ); //la que tiene el watch hasta el final porque esa detiene la ejecución
+// 'imagenes, versionWebp, versionAvif,' los saque del default
 
 // series - Se inicia una tarea, y hasta que finaliza, inicia la siguiente.
 // parallel - Todas inician al mismo tiempo
