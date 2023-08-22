@@ -6,6 +6,7 @@ const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
+const cssnano = require('cssnano');
 
 // postcss y autoprefixer es para que a compilar se genere codigo de ultima generacion
 // y compatible  con diferentes buscadores los cuales escribes al final en el package.json
@@ -24,7 +25,7 @@ function css(done) {
     src('src/scss/app.scss') //identifiar
         .pipe(sourcemaps.init())
         .pipe( sass() ) //compilar
-        .pipe( postcss([ autoprefixer() ]) ) 
+        .pipe( postcss([ autoprefixer(), cssnano() ]) ) 
         .pipe( sourcemaps.write('.')) // el . para que se guarde en el build 
         .pipe( dest('build/css')) //guardar
 
