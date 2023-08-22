@@ -5,6 +5,8 @@ const { src, dest, watch, series, parallel} = require('gulp'); // exporta multip
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+
 // postcss y autoprefixer es para que a compilar se genere codigo de ultima generacion
 // y compatible  con diferentes buscadores los cuales escribes al final en el package.json
 // "browserslist": ["last 1 version", "> 1%" ] --- con esto le dices todos los buscadores 
@@ -20,8 +22,10 @@ const avif = require('gulp-avif');
 // pasos: 1 -identificar archivo, 2 - compilarla, 3 - Guardar el .css
 function css(done) {
     src('src/scss/app.scss') //identifiar
+        .pipe(sourcemaps.init())
         .pipe( sass() ) //compilar
         .pipe( postcss([ autoprefixer() ]) ) 
+        .pipe( sourcemaps.write('.')) // el . para que se guarde en el build 
         .pipe( dest('build/css')) //guardar
 
     done(); //para que termine la compilacion
